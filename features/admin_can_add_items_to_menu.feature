@@ -19,3 +19,7 @@ Feature: Admin can add items to menu
         And I fill in 'Price' with '8'
         And I click 'Add item to menu'
         Then I should see 'Canapé was successfully added to the menu!'
+
+    Scenario: Admin can not add an item to his menu
+        Given I click 'Add item to menu'
+        Then I should see "Please make sure you have filled in all fields."
