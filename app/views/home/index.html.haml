@@ -2,3 +2,8 @@
 = link_to "Log in", new_user_session_path
 = link_to "Sign up", new_user_registration_path
 
+- if @user
+    - if @user.role == 'admin'
+        = link_to "Manage menu", admin_index_path
+    - elsif @user.role == 'user'
+        %p hello user

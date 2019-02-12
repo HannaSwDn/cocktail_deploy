@@ -6,12 +6,12 @@ Feature: Admin can add items to menu
 
     Background:
         Given the following user exists
-            | email          | password |
-            | admin@mail.com | password |
+            | email          | password | role  |
+            | admin@mail.com | password | admin |
 
-        And I visit the landing page
-        And I click 'manage menu'
-        And I click 'add items'
+        And I am logged in as 'admin@mail.com'
+        And I click 'Manage menu'
+        And I click 'Add items to menu'
 
     Scenario: Admin can successfully add an item to his menu
         Given I fill in 'Title' with 'Canapé'
