@@ -18,7 +18,6 @@ Feature: Admin can edit item on menu
 
     Scenario: Admin can successfully edit an item
         Given I click 'Edit Wine'
-        Then show me the page
         And I fill in 'Title' with 'Wine'
         And I fill in 'Category' with 'Drinks'
         And I fill in 'Price' with '12'
