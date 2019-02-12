@@ -5,15 +5,14 @@ Feature: Admin can add items to menu
     I would like to be able to add items to the menu
 
     Background:
-        Given the following User exists
-
-            | mail           | password |
+        Given the following user exists
+            | email          | password |
             | admin@mail.com | password |
-        
-        And I am on the landing page
+
+        And I visit the landing page
         And I click 'manage menu'
         And I click 'add items'
-        
+
     Scenario: Admin can successfully add an item to his menu
         Given I fill in 'Title' with 'Canapé'
         And I select 'Appetizer' from 'Category'
