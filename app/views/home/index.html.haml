@@ -11,7 +11,7 @@
 - @items.each do |item|
     %p= item.title
     %p= item.category
-    %p= item.price
+    %p= "#{item.price}$"
 
     - if @user
         - if @user.role == 'admin'
