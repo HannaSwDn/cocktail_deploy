@@ -12,9 +12,9 @@ class ItemController < ApplicationController
         @item = Item.new(item_params)
 
         if @item.save
-            redirect_to admin_index_path, notice: "Canapé was successfully added to the menu!"
+            redirect_to admin_index_path, notice: "#{@item.title} was successfully added to the menu!"
         else
-            render "new"
+            redirect_to new_item_path, notice: "Please make sure you have filled in all fields."
         end
     end
 
