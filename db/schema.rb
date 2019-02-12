@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2019_02_12_095314) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "menus", force: :cascade do |t|
+    t.string "title"
+    t.string "category"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

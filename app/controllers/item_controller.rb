@@ -17,6 +17,12 @@ class ItemController < ApplicationController
         end
     end
 
+    def destroy
+        @item = Item.find(params[:id])
+        @item.destroy
+        redirect_to root_path, notice: "#{@item.title} was successfully removed from the menu."
+    end
+
     private
 
     def item_params
