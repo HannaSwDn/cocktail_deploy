@@ -22,4 +22,5 @@ Feature: Admin can add items to menu
 
     Scenario: Admin can not add an item to his menu
         Given I click 'Add item to menu'
-        Then I should see "Please make sure you have filled in all fields."
+        Then I should see 'Please make sure you have filled in all fields.'
+    

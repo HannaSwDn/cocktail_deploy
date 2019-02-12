@@ -1,5 +1,4 @@
 class ItemController < ApplicationController
-
     def index
         @items = Item.all
     end
@@ -23,5 +22,4 @@ class ItemController < ApplicationController
     def item_params
         params.require(:item).permit(:title, :category, :price)
     end
-
 end
