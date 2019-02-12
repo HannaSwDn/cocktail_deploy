@@ -26,6 +26,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
+  gem 'launchy'
 end
 
 group :development do

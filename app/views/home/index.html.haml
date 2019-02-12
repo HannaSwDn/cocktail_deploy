@@ -1,3 +1,14 @@
 = link_to "Log out", destroy_user_session_path, method: :delete
 = link_to "Log in", new_user_session_path
 = link_to "Sign up", new_user_registration_path
+
+- if @user
+    - if @user.role == 'admin'
+        = link_to "Admin page", admin_index_path
+    - elsif @user.role == 'user'
+        %p hello user
+
+- @items.each do |item|
+    %p= item.title
+    %p= item.category
+    %p= item.price
