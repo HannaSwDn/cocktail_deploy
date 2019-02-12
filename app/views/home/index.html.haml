@@ -12,3 +12,5 @@
     %p= item.title
     %p= item.category
     %p= item.price
+    - if @user.role == 'admin'
+        = link_to "Delete", item_path(item), method: :delete
