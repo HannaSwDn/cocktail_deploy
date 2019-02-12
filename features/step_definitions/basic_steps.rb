@@ -20,3 +20,7 @@ Given("I am logged in as {string}") do |email|
     fill_in 'Password', with: 'password'
     click_on 'Log in'
 end
+
+Then("show me the page") do
+    save_and_open_page
+end
