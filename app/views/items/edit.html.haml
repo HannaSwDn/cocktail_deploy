@@ -1,4 +1,4 @@
-= form_with model: @item, url: item_index_path  do |form|
+= form_with model: @item do |form|
 
     %p
         = form.label :title
@@ -12,4 +12,5 @@
         = form.label :price
         = form.number_field :price
 
-    %p= form.submit "Add item to menu"
+    %p
+        = form.submit "Update item"

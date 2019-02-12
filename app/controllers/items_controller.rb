@@ -1,4 +1,4 @@
-class ItemController < ApplicationController
+class ItemsController < ApplicationController
     def index
         @items = Item.all
     end
@@ -21,6 +21,17 @@ class ItemController < ApplicationController
         @item = Item.find(params[:id])
         @item.destroy
         redirect_to root_path, notice: "#{@item.title} was successfully removed from the menu."
+    end
+
+    def edit
+        @item = Item.find(params[:id])
+    end
+
+    def update
+        @item = Item.find(params[:id])
+        if @item.update_attributes(item_params)
+            redirect_to root_path, notice: "#{@item.title} was successfully updated."
+        end
     end
 
     private
