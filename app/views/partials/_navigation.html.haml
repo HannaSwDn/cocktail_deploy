@@ -1,0 +1,16 @@
+#nav
+    = image_tag "valencia.png", id: 'logo'
+
+    %p#address drottninggatan Xx Stockholm, Sweden
+
+    %ul
+        %li home
+        %li menu
+        %li about
+        %li contact
+
+    %p#openingHours= "Opening hours today: #{@openToday}"
+
+    - if @user
+        - if @user.role == 'admin'
+            = link_to "Admin page", admin_index_path
