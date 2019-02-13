@@ -2,17 +2,6 @@
     = render partial: 'partials/navigation'
 
     #image
-
-#menu
-    - @items.each do |item|
-        %p= item.title
-        %p= item.category
-        %p= "#{item.price}$"
-
-        - if @user
-            - if @user.role == 'admin'
-                = link_to "Delete #{item.title}", item_path(item), method: :delete
-                = link_to "Edit #{item.title}", edit_item_path(item)
             
     = link_to "Log out", destroy_user_session_path, method: :delete
     = link_to "Log in", new_user_session_path

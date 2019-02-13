@@ -14,3 +14,14 @@
     - if @user
         - if @user.role == 'admin'
             = link_to "Admin page", admin_index_path
+
+#menu
+    - @items.each do |item|
+        %p= item.title
+        %p= item.category
+        %p= "#{item.price}$"
+
+        - if @user
+            - if @user.role == 'admin'
+                = link_to "Delete #{item.title}", item_path(item), method: :delete
+                = link_to "Edit #{item.title}", edit_item_path(item)
