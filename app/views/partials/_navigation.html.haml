@@ -9,6 +9,8 @@
         %li about
         %li contact
 
+    %p#openingHours= "Opening hours today: #{@openToday}"
+
     - if @user
         - if @user.role == 'admin'
             = link_to "Admin page", admin_index_path
