@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: Montserrat;
+    font-weight: 300;
     margin: 0;
     overflow-x: hidden;
     padding: 0;
@@ -11,9 +12,8 @@
 #nav {
     background-color: white;
     float: left;
-    font-weight: 300;
     height: 100vh;
-    width: 15rem;
+    width: 17rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -24,6 +24,7 @@
 
 ul {
     list-style-type: none;
+    padding-bottom: 20px;
 }
 
 li {
@@ -35,16 +36,16 @@ li {
 }
 
 li:hover {
-    color: gray;
+    color: #b08c4b;
 }
 
 #image {
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .5)), url('testing.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)), url('image4.jpg');
     background-position: center;
     background-size: cover;
     float: right;
     height: 100vh;
-    width: calc(100vw - 15rem);
+    width: calc(100vw - 17rem);
 }
 
 #address {
@@ -53,10 +54,68 @@ li:hover {
     padding: 20px 0px 20px 0px;
 }
 
+#openToday {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 22px;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
+}
+
 #menu {
-    width: 100vw;
+    background-color: rgba(255, 255, 255, .95);
+    border-left: 1px solid #b08c4b;
+    display: none;
+    height: 100vh;
+    left: 17rem;
+    opacity: 0;
+    overflow-y: scroll;
+    padding: 0px 50px 0px 50px;
+    position: absolute;
+    top: 0;
+    transition: opacity .25s;
+    width: calc(100vw - 17rem);
+}
+
+#menu h2 {
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.adminButton {
+    border: 1px solid black;
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .25s;
+}
+
+.adminButton:hover {
+    background-color: rgba(250, 242, 159, .1);
+}
+
+/* menu items */
+
+.item {
+    margin: auto;
+    padding: 10px 10vw 10px 10vw;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.itemDescription {
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
 }
 
 .wrapper {
     width: 100vw;
 }
+

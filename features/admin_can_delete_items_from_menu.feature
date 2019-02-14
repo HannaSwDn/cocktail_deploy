@@ -9,9 +9,9 @@ Feature: Admin can delete items from menu
             | email          | password | role  |
             | admin@mail.com | password | admin |
 
-        And the following item exists
+        And the following items exists
             | title | category | price |
-            | Wine  | drinks   | 8     |
+            | Wine  | Drink    | 8     |
 
         And I am logged in as 'admin@mail.com'
 
