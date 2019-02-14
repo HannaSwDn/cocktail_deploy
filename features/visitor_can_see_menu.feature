@@ -19,4 +19,4 @@ Feature: Visitor can see menu
         And I should see '12$'
         And I should see 'Wine'
         And I should see '8$'
-        Then show me the page
+        
