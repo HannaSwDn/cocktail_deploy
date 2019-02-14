@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
         @item = Item.new(item_params)
 
         if @item.save
-            redirect_to admin_index_path, notice: "#{@item.title} was successfully added to the menu!"
+            redirect_to root_path, notice: "#{@item.title} was successfully added to the menu!"
         else
             redirect_to new_item_path, notice: "Please make sure you have filled in all fields."
         end
@@ -37,6 +37,6 @@ class ItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:item).permit(:title, :category, :price)
+        params.require(:item).permit(:title, :category, :description, :price)
     end
 end

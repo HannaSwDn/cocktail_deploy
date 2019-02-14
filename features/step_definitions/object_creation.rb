@@ -4,7 +4,7 @@ Given('the following user exists') do |table|
 	end
 end
 
-Given('the following item exists') do |table|
+Given('the following items exists') do |table|
 	table.hashes.each do |item|
 		FactoryBot.create(:item, item)
 	end

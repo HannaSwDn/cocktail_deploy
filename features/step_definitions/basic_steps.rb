@@ -24,3 +24,11 @@ end
 Then('show me the page') do
     save_and_open_page
 end
+
+Given("I click on list item {string}") do |string|
+    find('#liMenu').click
+end
+
+Then("I wait {int} seconds") do |int|
+    sleep 2
+end
