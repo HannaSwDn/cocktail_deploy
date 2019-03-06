@@ -7,7 +7,7 @@ Feature: Admin can edit item on menu
     Background:
         Given the following items exists
             | title | category | price |
-            | Vodka | Drink    | 8     |
+            | Vodka | Cocktail | 8     |
 
         And the following user exists
             | email          | password | role  |
@@ -16,9 +16,10 @@ Feature: Admin can edit item on menu
         And I am logged in as 'admin@mail.com'
         And I visit the landing page
         And I click on list item 'Menu'
+        Then show me the page
 
     Scenario: Admin can successfully edit an item
-        Given I click 'Edit Vodka'
+        Given I click 'Edit'
         And I fill in 'Title' with 'Vodka'
         And I fill in 'Category' with 'Drink'
         And I fill in 'Description' with 'Russian vodka'

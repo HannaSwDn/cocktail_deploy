@@ -7,7 +7,7 @@ Feature: Visitor can see menu
     Background:
         Given the following items exists
             | title   | category | description    | price |
-            | Vodka   | Drink    | Russian vodka  | 12    |
+            | Vodka   | Cocktail | Russian vodka  | 12    |
             | Pickles | Food     | Crispy pickles | 6     |
 
         And I visit the landing page

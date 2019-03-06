@@ -11,7 +11,7 @@ Feature: Admin can delete items from menu
 
         And the following items exists
             | title | category | price |
-            | Vodka | Drink    | 8     |
+            | Vodka | Cocktail | 8     |
 
         And I am logged in as 'admin@mail.com'
 
