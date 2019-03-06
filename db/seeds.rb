@@ -7,22 +7,72 @@ admin.save
 user = User.create(email: 'user@mail.com', password: 'password', password_confirmation: 'password', role: 'user')
 user.save
 
-5.times {
-    item = Item.create(title: 'Canapés', category: 'Appetizer', description: 'This is a very good item', price: 8)
-    item.save
-}
+Item.create(
+    title: 'Pickles',
+    description: '3 Crispy pickles',
+    price: '6',
+    category: 'Food'
+)
 
-5.times {
-    item = Item.create(title: 'Salmon', category: 'Main', description: 'This is a very good item', price: 12)
-    item.save
-}
+Item.create(
+        title: 'White Russian',
+        description: 'Vodka, Coffee Liquor, Cream',
+        price: '13',
+        category: 'Cocktail'
+    )
 
-5.times {
-    item = Item.create(title: 'Panacotta', category: 'Dessert', description: 'This is a very good item', price: 7)
-    item.save
-}
+Item.create(
+        title: 'Mojito',
+        description: 'White rum, Mint leaves, Sugar Syrup, Lime juice, Mint sprigs',
+        price: '12',
+        category: 'Cocktail'
+    )
 
-5.times {
-    item = Item.create(title: 'Red Wine', category: 'Drink', description: 'This is a very good item', price: 14)
-    item.save
-}
+Item.create(
+        title: 'Martini',
+        description: 'Gin, Dry Vermouth, Lemon twist',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Martini',
+        description: 'Gin, Dry Vermouth, Lemon twist',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Old Fashioned',
+        description: 'Bourbon, Angostura Bitters, Orange Bitters, Sugar, Orange peel',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Long island iced tea',
+        description: 'Gin, Vodka, Tequila, White rum, Triple sec, Lemon juice, Gomme syrup, Cola',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Espresso Martini',
+        description: 'Vanilla vodka, Kahlúa, Double espresso, Sugar syrup, Coffee beans',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Screwdriver',
+        description: 'Vodka, Orange juice, Lime wedge',
+        price: '12',
+        category: 'Cocktail'
+    )
+
+Item.create(
+        title: 'Blue Lagoon',
+        description: 'Curacao, Vodka, Lemonade, Ice, Maraschino cherry',
+        price: '12',
+        category: 'Cocktail'
+    )

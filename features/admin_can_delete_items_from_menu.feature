@@ -11,10 +11,10 @@ Feature: Admin can delete items from menu
 
         And the following items exists
             | title | category | price |
-            | Wine  | Drink    | 8     |
+            | Vodka | Drink    | 8     |
 
         And I am logged in as 'admin@mail.com'
 
     Scenario: Admin can successfully delete an item from his menu
         And I click 'Delete'
-        Then I should see 'Wine was successfully removed from the menu.'
+        Then I should see 'Vodka was successfully removed from the menu.'

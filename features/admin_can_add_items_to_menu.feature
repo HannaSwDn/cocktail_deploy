@@ -14,14 +14,13 @@ Feature: Admin can add items to menu
         And I click 'Add items to menu'
 
     Scenario: Admin can successfully add an item to his menu
-        Given I fill in 'Title' with 'Canapé'
-        And I fill in 'Category' with 'Appetizer'
-        And I fill in 'Description' with 'Very good Canapé'
-        And I fill in 'Price' with '8'
+        Given I fill in 'Title' with 'Vodka'
+        And I fill in 'Category' with 'Drink'
+        And I fill in 'Description' with 'Russian vodka'
+        And I fill in 'Price' with '10'
         And I click 'Add item to menu'
-        Then I should see 'Canapé was successfully added to the menu!'
+        Then I should see 'Vodka was successfully added to the menu!'
 
     Scenario: Admin can not add an item to his menu
         Given I click 'Add item to menu'
         Then I should see 'Please make sure you have filled in all fields.'
-    

@@ -6,17 +6,16 @@ Feature: Visitor can see menu
 
     Background:
         Given the following items exists
-            | title | category | description     | price |
-            | Wine  | Drink    | very good Wine  | 8     |
-            | Pasta | Main     | very good Pasta | 12    |
+            | title   | category | description    | price |
+            | Vodka   | Drink    | Russian vodka  | 12    |
+            | Pickles | Food     | Crispy pickles | 6     |
 
         And I visit the landing page
 
     Scenario: Visitor sees the menu
         Given I click on list item 'menu'
         Then I wait 2 seconds
-        Then I should see 'Pasta'
+        Then I should see 'Vodka'
         And I should see '12$'
-        And I should see 'Wine'
-        And I should see '8$'
-        
+        And I should see 'Pickles'
+        And I should see '6$'
