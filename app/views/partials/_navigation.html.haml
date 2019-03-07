@@ -2,6 +2,12 @@
 
     #menuIcon
         %p{onclick: 'openMenu()'} MENU
+    
+    - if @user
+        - if @user.role == 'admin'
+            = link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'adminLogin'
+    - else
+        = link_to 'Admin', new_user_session_path, class: 'adminLogin'
 
 #content
     #menu
@@ -41,4 +47,19 @@
 
     #info
         .infoContent
-            
+            .address
+                %hr.infoHr
+                %p Kungsgatan Xx
+                %p Stockholm, Sweden
+                %hr.infoHr
+
+            .contactInfo
+                %p cocktail@cocktail.com
+                %p 000 - 000 - 0000
+
+            .welcome
+                %hr.infoHr
+                %p WELCOME!
+                %hr.infoHr
+
+            %p{onClick: 'closeMenu()', id: 'closeMenu'} X

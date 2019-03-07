@@ -7,3 +7,8 @@ const openMenu = () => {
     let content = document.getElementById('content')
     content.style.display = 'block'
 }
+
+const closeMenu = () => {
+    let content = document.getElementById('content')
+    content.style.display = 'none'
+}

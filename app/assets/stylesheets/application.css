@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-weight: 400;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
 }
 
@@ -56,6 +57,7 @@
 }
 
 #cocktails, #contact {
+    cursor: pointer;
     font-size: 20px;
     height: 4rem;
     letter-spacing: 10px;
@@ -131,6 +133,14 @@
     width: 7rem;
 }
 
+.adminLogin {
+    bottom: 20px;
+    color: black;
+    left: 30px;
+    position: absolute;
+    text-decoration: none;
+}
+
 #menuIcon {
     cursor: pointer;
     height: 6rem;
@@ -191,6 +201,7 @@
 
 .item {
     margin: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 .itemTitle, .itemPrice {
@@ -212,12 +223,89 @@
     text-decoration: none;
 }
 
+#closeMenu {
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
 /* info in navigation */
 
 #info {
     background-color: rgba(255, 255, 255, .95);
+    overflow: hidden;
 }
 
 .infoContent {
+    font-size: 30px;
+    height: 30rem;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
 
+.address {
+    letter-spacing: 15px;
+}
+
+.contactInfo {
+    letter-spacing: 5px;
+    padding: 50px 0px 50px 0px;
+}
+
+.welcome {
+    letter-spacing: 5px;
+}
+
+.infoHr {
+    background-color: black;
+    border: none;
+    height: 2px;
+    margin: 25px auto 25px auto;
+    width: 100px;
+}
+
+/* add item to menu */
+
+.addItemWrapper {
+    align-items: center;
+    display: flex;
+    font-family: Roboto Condensed;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.addItemForm {
+    padding-bottom: 60px;
+}
+
+.addItemField {
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    padding-top: 60px;
+    width: 400px;
+}
+
+.addItemField:focus {
+    outline: none;
+}
+
+.addItemButton {
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 50px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+.addItemButton:hover {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
 }

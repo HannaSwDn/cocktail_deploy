@@ -5,6 +5,10 @@ class ItemsController < ApplicationController
 
     def new
         @item = Item.new
+
+        if user_signed_in?
+            @user = current_user
+        end
     end
 
     def create

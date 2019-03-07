@@ -1,20 +1,22 @@
-= form_with model: @item do |form|
+- if @user
+    - if @user.role == 'admin'
+        .addItemWrapper
+            = form_with model: @item do |form|
 
-    %p
-        = form.label :title
-        = form.text_field :title
+                .addItemForm
+                    %p
+                        = form.text_field :title, class: 'addItemField', placeholder: 'title'
 
-    %p
-        = form.label :category
-        = form.text_field :category
+                    %p
+                        = form.text_field :category, class: 'addItemField', placeholder: 'category'
 
-    %p
-        = form.label :description
-        = form.text_field :description
+                    %p
+                        = form.text_field :description, class: 'addItemField', placeholder: 'description'
 
-    %p
-        = form.label :price
-        = form.number_field :price
+                    %p
+                        = form.text_field :price, class: 'addItemField', placeholder: 'price'
 
-    %p
-        = form.submit "Add item to menu"
+                    %p
+                        = form.submit 'ADD TO MENU', class: 'addItemButton'
+- else
+    %p Sorry, you do not have access to this page
