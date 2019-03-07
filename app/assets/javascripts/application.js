@@ -4,9 +4,6 @@
 //= require_tree .
 
 const openMenu = () => {
-    let menu = document.getElementById('menu')
-    menu.style.display = 'block'
-    setTimeout(function(){
-        menu.style.opacity = '1'
-    }, 10);
+    let content = document.getElementById('content')
+    content.style.display = 'block'
 }

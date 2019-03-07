@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto+Mono:300,400');
+
+* {
+    box-sizing: border-box;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+}
+
+/* all emenents that has display: flex, align-items: center, justify-content: center */
+
+#homeImage, #cocktails, #contact, .middle, #menuIcon, #info {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* homepage */
+
+#homeImage {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url('drink.jpg');
+    background-position: center;
+    background-size: cover;
+    float: left;
+    height: 100vh;
+    width: calc(100vw - 32rem);
+}
+
+#homeText {
+    color: white;
+    font-family: Roboto Mono;
+    font-size: 22px;
+    letter-spacing: 25px;
+    line-height: 7rem;
+    text-align: center;
+}
+
+#homeHr {
+    background-color: white;
+    border: none;
+    height: 2px;
+    margin: auto;
+    width: 200px;
+}
+
+#homeInfo {
+    background-color: white;
+    float: left;
+    font-family: Roboto Mono;
+    height: 100vh;
+    width: 25rem;
+}
+
+#cocktails, #contact {
+    font-size: 20px;
+    height: 4rem;
+    letter-spacing: 10px;
+    width: 100%;
+}
+
+#cocktails hr, #contact hr {
+    background-color: black;
+    border: none;
+    height: 2px;
+    margin-left: 20px;
+    width: 100px;
+}
+
+#contact hr {
+    margin-left: none;
+    margin-right: 45px;
+    width: 130px;
+}
+
+.middle {
+    height: calc(100vh - 8rem);
+    width: 100%;
+}
+
+.middletext {
+    text-align: center;
+}
+
+.middle2 {
+    height: 22rem;
+    width: 21rem;
+}
+
+.middle2first, .middle2second {
+    height: 50%;
+    position: relative;
+    width: 100%;
+}
+
+.middle2first p, .middle2second p {
+    bottom: 0;
+    position: absolute;
+}
+
+.middle2first {
+    border-left: 2px solid black;
+}
+
+.middle2second {
+    border-right: 2px solid black;
+}
+
+#openToday {
+    font-size: 20px;
+    left: 60px;
+}
+
+#openingHours {
+    font-family: Roboto Condensed;
+    font-size: 35px;
+    left: 80px;
+    top: 0;
+}
+
+/* navigation */
+
+#nav {
+    background-color: white;
+    float: left;
+    font-family: Roboto Condensed;
+    height: 100vh;
+    width: 7rem;
+}
+
+#menuIcon {
+    cursor: pointer;
+    height: 6rem;
+    width: 100%;
+}
+
+#menuIcon p {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 5px 0px 5px 0px;
+}
+
+/* menu and information */
+
+#content {
+    display: none;
+    font-family: Roboto Condensed;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+#menu, #info {
+    float: left;
+    height: 100vh;
+    width: 50vw;
+}
+
+#menu {
+    background: linear-gradient(rgba(0, 0, 0, .82), rgba(0, 0, 0, .82)), url('green.jpg');
+    background-size: cover;
+    color: white;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+#menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menuHr {
+    background-color: white;
+    border: none;
+    height: 2px;
+    margin: auto;
+    width: 100px;
+}
+
+.menuTitle {
+    font-size: 30px;
+    letter-spacing: 20px;
+    line-height: 6rem;
+}
+
+.item {
+    margin: 20px 0px 20px 0px;
+}
+
+.itemTitle, .itemPrice {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.itemDescription {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px 100px 10px 100px;
+}
+
+.adminButton {
+    border: 2px solid white;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+}
+
+/* info in navigation */
+
+#info {
+    background-color: rgba(255, 255, 255, .95);
+}
+
+.infoContent {
+
+}

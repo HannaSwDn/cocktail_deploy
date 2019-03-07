@@ -1,43 +1,44 @@
 #nav
 
-    %ul
-        %li home
-        %li{onclick: "openMenu()", id: 'liMenu'} menu
+    #menuIcon
+        %p{onclick: 'openMenu()'} MENU
 
-    %p Opening hours today:
-    %p#openToday= "#{@openToday}"
+#content
+    #menu
+        // display items depending on category
+        %h2.menuTitle - COCKTAILS -
+        - if @user
+            - if @user.role == 'admin'
+                = link_to "ADD ITEM", new_item_path, class: 'adminButton'
 
-    - if @user
-        - if @user.role == 'admin'
-            = link_to "Admin page", admin_index_path
+        %hr.menuHr
 
-#menu
-    // display items depending on category
-    %h2 - Drinks -
+        - @items.each do |item|
+            - if item.category == 'Cocktail'
+                .item
+                    %p.itemTitle= item.title
+                    %p.itemDescription= item.description
+                    %p.itemPrice= "#{item.price}$"
+                    %br
+                    - if @user
+                        - if @user.role == 'admin'
+                            = link_to "Edit", edit_item_path(item), class: 'adminButton'
+                            = link_to "Delete", item_path(item), method: :delete, class: 'adminButton'
 
-    - @items.each do |item|
-        - if item.category == 'Cocktail'
-            .item
-                %p.itemTitle= item.title
-                %p.itemDescription= item.description
-                %p.itemPrice= "#{item.price}$"
-                %br
-                - if @user
-                    - if @user.role == 'admin'
-                        = link_to "Delete #{item.title}", item_path(item), method: :delete, class: 'adminButton'
-                        = link_to "Edit #{item.title}", edit_item_path(item), class: 'adminButton'
+        %h2.menuTitle - FOOD -
+        
+        - @items.each do |item|
+            - if item.category == 'Food'
+                .item
+                    %p.itemTitle= item.title
+                    %p.itemDescription= item.description
+                    %p.itemPrice= "#{item.price}$"
+                    %br
+                    - if @user
+                        - if @user.role == 'admin'
+                            = link_to "Edit", edit_item_path(item), class: 'adminButton'
+                            = link_to "Delete", item_path(item), method: :delete, class: 'adminButton'
 
-    %h2 - Appetizers -
-    
-    - @items.each do |item|
-        - if item.category == 'Food'
-            .item
-                %p.itemTitle= item.title
-                %p.itemDescription= item.description
-                %p.itemPrice= "#{item.price}$"
-                %br
-                - if @user
-                    - if @user.role == 'admin'
-                        = link_to "Delete #{item.title}", item_path(item), method: :delete, class: 'adminButton'
-                        = link_to "Edit #{item.title}", edit_item_path(item), class: 'adminButton'
-
+    #info
+        .infoContent
+            

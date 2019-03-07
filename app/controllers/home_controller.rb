@@ -19,7 +19,7 @@ class HomeController < ApplicationController
         when 5
             return '17:00 - 01:00'
         else
-            return '17:00 - 03:00'
+            return '17:00 - 02:00'
         end
     end
 end
